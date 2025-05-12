@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# RBAC Blog Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Role-Based Access Control (RBAC) blog platform built using **Node.js**, **Express**, **MongoDB**, and **React**.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication** with JWT.
+- **Role-based Authorization** (Admin/User).
+- **CRUD Operations** for blogs.
+- **Admin Dashboard** to manage posts.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React, Axios
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Authentication**: JWT
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+### Prerequisites
+Make sure you have the following installed:
+- Node.js
+- MongoDB or a cloud MongoDB instance (like MongoDB Atlas)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend Setup
 
-### `npm run build`
+Clone the repo:
+   git clone https://github.com/vardhans-github/rbac-blog-platform.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Go to the backend directory:
+cd rbac-blog-platform/backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install dependencies:
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create a .env file in the backend folder with the following variables:
+JWT_SECRET=<Your secret key>
+MONGO_URI=<Your MongoDB URI>
+Run the backend:
+npm start
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Go to the frontend directory:
+cd rbac-blog-platform/frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install dependencies:
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run the frontend:
+npm start
 
-## Learn More
+The application will run on http://localhost:3000 and the backend on http://localhost:5000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Usage
+Sign Up: Create a new account.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Login: Log in with your credentials.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Admin: Only admins can create, update, or delete blog posts.
